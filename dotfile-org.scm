@@ -1,6 +1,4 @@
 #!/usr/bin/env chibi-scheme
-;; -*- scheme -*-
-
 ;;; dotfiles.scm -- Idempotent dotfile symlink manager
 ;;;
 ;;; Usage: chibi-scheme dotfiles.scm [DOTDIR]
@@ -10,8 +8,8 @@
 ;;; contains two whitespace-separated fields:
 ;;;
 ;;;   # this is a comment
-;;;   bash/.bashrc              /home/alice/.bashrc
-;;;   config/nvim/init.lua      /home/alice/.config/nvim/init.lua
+;;;   bash/bashrc               /home/alice/.bashrc
+;;;   emacs/config.org          /home/alice/.emacs.d/config.org
 ;;;
 ;;; The first field is the source path relative to DOTDIR.
 ;;; The second field is the absolute destination path.
