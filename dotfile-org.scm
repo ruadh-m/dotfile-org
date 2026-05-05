@@ -22,7 +22,6 @@
         (scheme process-context)
         (prefix (chibi filesystem) fs:))
 
-;; -----------------------------------------------------------------------------
 ;; String utilities
 
 (define (string-null? s)
@@ -45,7 +44,6 @@
 (define (string-trim s)
   (string-trim-left (string-trim-right s)))
 
-;; -----------------------------------------------------------------------------
 ;; Path utilities
 
 (define (path-join a b)
@@ -100,7 +98,6 @@
       path
       (path-join (fs:current-directory) path)))
 
-;; -----------------------------------------------------------------------------
 ;; Filesystem operations
 
 (define (mkdir-p path)
@@ -154,7 +151,6 @@
        (display " (exists and is not a symlink)")
        (newline)))))
 
-;; -----------------------------------------------------------------------------
 ;; Manifest parsing
 
 (define (split-line line)
@@ -194,7 +190,6 @@
                           (ensure-symlink abs-src abs-dst))))))
               (loop))))))))
 
-;; -----------------------------------------------------------------------------
 ;; Entry point
 
 (define (main args)
